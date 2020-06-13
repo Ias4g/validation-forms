@@ -25,3 +25,112 @@ body{
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
+form{
+    /* background: rgba(255, 255, 255, 0.03); */
+    background: rgba(255, 255, 255, 0.09);
+    width: 100%;
+    max-width: 500px;
+    margin: 32px auto;
+    padding: 32px 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+form h1{
+    margin-bottom: 20%;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+form h2{
+    margin-bottom: 5%;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+div.input{
+    margin-bottom: 24px;
+    position: relative;
+}
+
+input, button{
+    /* Reset appearance */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* box */
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    background-color: transparent;
+    outline: none;
+
+    /* text */
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+button{
+    margin-top: 16px;
+    background-color: var(--primary-color);
+}
+
+button:hover{
+    background:rgb(253, 149, 31, 0.6);
+    transition: .4s;
+    cursor: pointer;
+}
+
+input ~ label{
+    position: absolute;
+    top: 16px;
+    left: 0;
+    /* color: rgba(255, 255, 255, 0.06); */
+    color: var(--text-color);
+    transition: .4s;
+}
+
+input:focus ~ label, input:valid ~ label{
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+.input span.error{
+    display: flex;
+    padding: 0;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.input span.error.active{
+    border: 1px solid #ff0000;
+    padding: 0.4em;
+}
+
+footer{
+    /* background: #fff; */
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer p{
+    /* color: var(--primary-color); */
+    color: rgb(253, 149, 31, 0.5);
+    font-size: 0.6em;
+}
+
+footer p a{
+    text-decoration: none;
+    /* color: var(--primary-color); */
+    color: rgb(253, 149, 31, 0.5);
+}
+
+footer p a:hover{
+    color: rgb(253, 149, 31, 1);
+    transition: .3s;
+}
