@@ -9,10 +9,34 @@ const fields = document.querySelectorAll("[required]")
 // console.log(fields)
 
 function customValidation(event) {
+    // eliminar o bubble
+    event.preventDefault()
+
     const field = event.target
 
-    // trocar mensagem de required
-    field.setCustomValidity("Este campo é obrigatório")
+    // logica para erificar se exixtem erros
+    function verifyErros() {
+        let foundError = false
+
+        for (let error in field.validity) {
+            // se não for customError
+            // então verifica se tem erro 
+            if (error != "cutomError" && field.validity[error]) {
+                foundError = error
+            }
+        }
+
+        return foundError
+    }
+
+    const error = verifyErros()
+    console.log("Error exist: ", error)
+
+    // if (error) {
+    //     field.setCustomValidity("Este campo é obrigatório")
+    // } else {
+    //     field.setCustomValidity("")
+    // }
 }
 
 // for(let field of fields)
