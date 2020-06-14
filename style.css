@@ -100,14 +100,22 @@ input:focus ~ label, input:valid ~ label{
     letter-spacing: 0.1em;
 }
 
+.input-email:invalid{
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
 .input span.error{
+    font-size: 0.7em;
     display: flex;
     padding: 0;
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: rgba(255, 0, 0, 0.3);
 }
 
 .input span.error.active{
-    border: 1px solid #ff0000;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
     padding: 0.4em;
 }
 
