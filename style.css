@@ -100,14 +100,16 @@ input:focus ~ label, input:valid ~ label{
     letter-spacing: 0.1em;
 }
 
-.input-email:invalid{
+/* input[type=email]:invalid ~ label {
     transform: translateY(-24px);
     font-size: 0.8em;
     letter-spacing: 0.1em;
-}
+} */
 
 .input span.error{
+    position: relative;
     font-size: 0.7em;
+    border-radius: 2px;
     display: flex;
     padding: 0;
     background-color: rgba(255, 0, 0, 0.3);
@@ -115,26 +117,34 @@ input:focus ~ label, input:valid ~ label{
 
 .input span.error.active{
     margin-top: 10px;
-    border: 1px solid rgba(255, 0, 0, 0.3);
-    padding: 0.4em;
+    padding: 0.8em;
+}
+
+.input span.error.active:after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(255, 0, 0, 0.3);
+    top: -10px;
+    left: 5%;
 }
 
 footer{
-    /* background: #fff; */
     margin-top: 24px;
     display: flex;
     justify-content: flex-end;
 }
 
 footer p{
-    /* color: var(--primary-color); */
     color: rgb(253, 149, 31, 0.5);
     font-size: 0.6em;
 }
 
 footer p a{
     text-decoration: none;
-    /* color: var(--primary-color); */
     color: rgb(253, 149, 31, 0.5);
 }
 
