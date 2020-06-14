@@ -1,6 +1,3 @@
-# validation-forms
- Customized forms validation with HTML and JavaScript
-
 <h1 align="center">validation-forms</h1>
 
 <p align="center">
