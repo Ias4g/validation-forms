@@ -1,8 +1,15 @@
+
 document.querySelector("form")
     .addEventListener("submit", event => {
-        console.log("Enviando...")
         // A linha abaixo não deixa o form ser enviado
         event.preventDefault()
+
+        alert("Enviando...")
+
+        document.getElementById("input-one").value = ""
+        document.getElementById("input-two").value = ""
+        document.getElementById("input-one").style.borderColor = "#fd951f"
+        document.getElementById("input-two").style.borderColor = "#fd951f"
     })
 
 const fields = document.querySelectorAll("[required]")
