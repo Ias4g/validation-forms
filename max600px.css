@@ -1,0 +1,32 @@
+@media only screen and (max-width: 600px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form{
+        max-width: 70%;
+        padding: 24px 24px;
+        border-radius: 10px;
+    }
+
+    form h1{
+        margin-bottom: 20%;
+        font-weight: 700;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    form h2{
+        margin-bottom: 5%;
+        font-weight: 400;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    input, button{
+        border-radius: 5px;
+        font-size: 0.8em;
+    }
+}
